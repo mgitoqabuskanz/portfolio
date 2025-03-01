@@ -1,4 +1,5 @@
 import { Button } from "./components/ui/button"
+import { motion } from "motion/react"
 import "./index.css"
 
 const App = () => {
