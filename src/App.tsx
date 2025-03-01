@@ -1,12 +1,10 @@
-import { Ghost } from "lucide-react"
 import { Button } from "./components/ui/button"
+import "./index.css"
 
 const App = () => {
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center min-h-svh">
-        <Button variant="secondary">Click me</Button>
-      </div>
+    <div className="flex flex-col items-center justify-center min-h-svh">
+      <Button variant="secondary" className="cursor-pointer">Click me</Button>
     </div>
   )
 }
