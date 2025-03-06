@@ -14,7 +14,7 @@ const HeroSection = () => {
             src={assets.profile_img}
             className="max-w-xs rounded-lg shadow-2xl" />
           <div>
-            <h1 className="text-5xl font-bold">Hero Title</h1>
+            <h1 className="text-5xl font-light">Hi, i'm <br className='flex lg:hidden' /><span className='font-bold'>Kanz Muhammad</span></h1>
             <p className="py-6">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem dolores, necessitatibus culpa 
               suscipit aliquid perferendis maxime quod, architecto reiciendis placeat illo delectus esse alias error nam unde 
