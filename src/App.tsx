@@ -8,6 +8,8 @@ import NavbarSection from './components/NavbarSection'
 import ProjectSection from './components/ProjectSection'
 import ResumeSection from './components/ResumeSection'
 import './index.css'
+import '@react-pdf-viewer/core/lib/styles/index.css';
+import '@react-pdf-viewer/thumbnail/lib/styles/index.css';
 
 function App() {
   return (

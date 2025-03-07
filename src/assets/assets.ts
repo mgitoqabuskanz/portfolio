@@ -19,8 +19,10 @@ import project5_img from './project_5.svg'
 import project6_img from './project_6.svg'
 import theme_pattern from './theme_pattern.svg'
 import user_icon from './user_icon.svg'
+import pdf from './pdf.pdf'
 
 export const assets = {
+  pdf,
   about_profile,
   arrow_icon,
   call_icon,
