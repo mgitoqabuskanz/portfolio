@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 const NavbarSection = () => {
-
-  const [isVisible, setIsVisible] = useState(true);
 
   const navLinks = [
     { link: "About", section:"about"},
