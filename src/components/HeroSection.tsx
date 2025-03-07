@@ -4,10 +4,12 @@ const HeroSection = () => {
   return (
     <>
       <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage: `url(${assets.header_img})`,
-        }}>
+      id='home'
+      className="hero min-h-screen"
+      style={{
+        backgroundImage: `url(${assets.header_img})`,
+      }}
+      >
         <div className="hero-overlay"></div>
         <div className="hero-content flex-col lg:flex-row-reverse lg:backdrop-blur-sm text-white text-center md:text-start">
           <img
