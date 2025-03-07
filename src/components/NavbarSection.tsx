@@ -37,16 +37,18 @@ const NavbarSection = () => {
                 </li>
               );
             })}
-            {/* <li><a>Home</a></li>
-            <li><a>About</a></li>
-            <li><a>Experience</a></li>
-            <li><a>Project</a></li>
-            <li><a>Resume</a></li>
-            <li><a>Contact</a></li> */}
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-3">
+          <Link 
+          to="contact" 
+          spy={true} 
+          smooth={true} 
+          offset={-70} 
+          duration={500} 
+          >
+            <a className='btn btn-ghost border-accent hover:btn-accent' role='button'>Hire Me</a>
+          </Link>
         </div>
       </div>
     </>

@@ -1,5 +1,5 @@
 import AboutSection from './components/AboutSection'
-import ContactSection from './components/ContactSection'
+import ContactSection from './components/contact/ContactSection'
 import DockSection from './components/DockSection'
 import ExperienceSection from './components/ExperienceSection'
 import FooterSection from './components/FooterSection'
