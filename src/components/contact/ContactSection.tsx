@@ -1,7 +1,5 @@
 import React from 'react';
 import contact_data from "../../assets/contact/contact_data"
-// import FormSendEmail from './FormSendEmail';
-// import FormSendWhatsapp from './FormSendWhatsapp';
 import FormMessage from './FormMessage';
 
 const ContactSection = () => {
@@ -52,9 +50,7 @@ const ContactSection = () => {
             <div className="divider before:bg-white after:bg-white">OR</div>
           </div>
 
-          {/* <FormSendEmail />
-          <FormSendWhatsapp /> */}
-            <FormMessage />
+          <FormMessage />
         </div>
       </div>
     </div>

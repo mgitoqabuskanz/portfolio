@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import './style.css'
 import FormSendEmail from './FormSendEmail';
 import FormSendWhatsapp from './FormSendWhatsapp';
 import { SiGmail, SiWhatsapp } from 'react-icons/si';
+import './style.css'
 
 const FormMessage = () => {
   const [isEmail, setIsEmail] = useState(true);
