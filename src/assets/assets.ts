@@ -11,12 +11,6 @@ import menu_close from './menu_close.svg'
 import menu_open from './menu_open.svg'
 import nav_underline from './nav_underline.svg'
 import profile_img from './profile_img.jpg'
-import project1_img from './project_1.svg'
-import project2_img from './project_2.svg'
-import project3_img from './project_3.svg'
-import project4_img from './project_4.svg'
-import project5_img from './project_5.svg'
-import project6_img from './project_6.svg'
 import theme_pattern from './theme_pattern.svg'
 import user_icon from './user_icon.svg'
 import resume from './resume/resume.pdf'
@@ -38,10 +32,4 @@ export const assets = {
   profile_img,
   theme_pattern,
   user_icon,
-  project1_img,
-  project2_img,
-  project3_img,
-  project4_img,
-  project5_img,
-  project6_img
 };
