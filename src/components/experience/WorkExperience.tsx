@@ -4,9 +4,9 @@ const WorkExperience = () => {
   return (
     <>
       <h2 className='text-3xl font-bold'>Work <span className="font-light">Experience</span></h2>
-      <blockquote class="border-l-4 border-gray-500 italic my-8 pl-4 md:pl-8 py-4 mx-4 md:mx-10 max-w-md">
-        <p class="text-sm font-medium">"Bridging Innovation and Technology in My Professional Journey"</p>
-        <cite class="block text-right mt-4 text-gray-600">- Kanz Muhammad</cite>
+      <blockquote className="border-l-4 border-gray-500 italic my-8 pl-4 md:pl-8 py-4 mx-4 md:mx-10 max-w-md">
+        <p className="text-sm font-medium">"Bridging Innovation and Technology in My Professional Journey"</p>
+        <cite className="block text-right mt-4 text-gray-600">- Kanz Muhammad</cite>
       </blockquote>
       <p className="text-justify">
         With experience as an IT Programmer, Network Operations, and IT Support, I have contributed to application development, network management, 
