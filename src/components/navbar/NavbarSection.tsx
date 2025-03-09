@@ -16,7 +16,7 @@ const NavbarSection = () => {
     <>
       <div className="navbar hidden lg:flex lg:fixed z-10 bg-black/50 backdrop-blur-md text-white shadow-sm">
         <div className="navbar-start">
-          <a onClick={scrollToTop} className="btn btn-ghost text-xl">Kanz</a>
+          <a onClick={scrollToTop} className="btn-ghost text-xl cursor-pointer transition-all duration-500 hover:bg-black/10 rounded py-2 px-4">Kanz</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -29,7 +29,7 @@ const NavbarSection = () => {
                   spy={true}
                   duration={500}
                   offset={-70}
-                  // className='cursor-pointer text-base-content hover:text-accent transition-all duration-500'
+                  className='cursor-pointer transition-all duration-500'
                   >
                     {link.link}
                   </Link>
@@ -45,9 +45,10 @@ const NavbarSection = () => {
           spy={true} 
           smooth={true} 
           offset={-70} 
-          duration={500} 
+          duration={500}
+          className='cursor-pointer transition-all duration-500 hover:bg-black/10 rounded py-2 px-4' 
           >
-            <a className='btn btn-ghost border-accent hover:btn-accent' role='button'>Hire Me</a>
+            <a className='' role='button'>Hire Me</a>
           </Link>
         </div>
       </div>

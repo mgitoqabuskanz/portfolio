@@ -1,12 +1,36 @@
 import { useState } from 'react'
 import '../../index.css'
-import project_data from '../../assets/project/project_data';
+import project_data, {prj_categories} from '../../assets/project/project_data';
 
 const ProjectSection = () => {
   const [showAll, setshowAll] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedFilter, setSelectedFilter] = useState('');
+
   const toggleshowAll = () => {
     setshowAll(!showAll);
   };
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleFilterChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedFilter(event.target.value);
+  };
+
+  const filteredProjects = project_data.filter((work) => {
+    const matchesSearch = work.w_name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          work.w_desc.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesFilter = selectedFilter ? work.w_category.includes(selectedFilter) : true;
+
+    return matchesSearch && matchesFilter;
+  });
+
+  function getSingleCategory(w_category: string[]): React.ReactNode {
+    return w_category.join(', ');
+  }
+
   return (
     <div id='project' className='flex items-center justify-center'>
       <div className="p-10 max-w-7xl text-center mx-10 md:mx-25 space-y-3">
@@ -15,24 +39,51 @@ const ProjectSection = () => {
         <p className="w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur tempore cupiditate corrupti magnam qui, 
           optio pariatur fugiat vel repellendus animi distinctio. Provident minus architecto eveniet, accusamus eos assumenda id?
         </p>
-        <div className="flex justify-between mt-10">
-          <div className="w-80 items-start">
-            <label className="input">
-              <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
-              <input type="search" required placeholder="Search"/>
-            </label>
-          </div>
-          <div className="w-80 items-end">
-            <select defaultValue="Pick a color" className="select">
-              <option disabled={true}>Pick a color</option>
-              <option>Crimson</option>
-              <option>Amber</option>
-              <option>Velvet</option>
+        <div className="flex justify-center mt-10">
+          <div className="join">
+            <div>
+              <input 
+              className="input join-item w-100" 
+              placeholder="Search" 
+              value={searchQuery}
+              onChange={handleSearchChange}/>
+            </div>
+            <select className="select join-item" onChange={handleFilterChange} value={selectedFilter}>
+              <option value="">Filter</option>
+              {prj_categories.map(category => (
+                <option key={category} value={category}>{category}</option>
+              ))}
+              {/* {prj_categories.map((category, index) => (
+                <option key={index} value={category}>{category}</option>
+              ))} */}
             </select>
+            <div className="indicator">
+              <button className="btn join-item">Search</button>
+            </div>
           </div>
         </div>
         <div className="grid grid-cols-3 gap-4">
-          {project_data.slice(0,showAll ? project_data.length : 3).map((work, index) => (
+          {filteredProjects.slice(0, showAll ? filteredProjects.length : 3).map((work, index) => (
+            <a href={work.w_link} className='block' key={index}>
+              <div className="card bg-base-100 shadow-sm">
+                <figure>
+                  <img
+                    src={work.w_img}
+                    alt={work.w_name} />
+                </figure>
+                <div className="card-body items-center">
+                  <h2 className="card-title">{work.w_name}</h2>
+                  <p>
+                    {work.w_desc.length > 100 ?
+                      `${work.w_desc.substring(0, 100)} (...)` : work.w_desc
+                    }
+                  </p>
+                  <p className="text-gray-500">Category: {getSingleCategory(work.w_category)}</p>
+                </div>
+              </div>
+            </a>
+          ))} 
+          {/* {project_data.slice(0,showAll ? project_data.length : 3).map((work, index) => (
             <a href={work.w_link} className='block'>
               <div key={index} className="card bg-base-100  shadow-sm">
                 <figure>
@@ -50,7 +101,7 @@ const ProjectSection = () => {
                 </div>
               </div>
             </a>
-          ))}          
+          ))}           */}
         </div>
         <a role="button" onClick={toggleshowAll} className="btn btn-wide btn-accent mt-10">{showAll ? 'Show Less' : 'Show All'}</a>
       </div>

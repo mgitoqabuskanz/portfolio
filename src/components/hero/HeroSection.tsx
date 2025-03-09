@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll'
 import { assets } from '../../assets/assets'
 
 const HeroSection = () => {
@@ -23,8 +24,27 @@ const HeroSection = () => {
               officiis quam? Suscipit?
             </p>
             <div className="space-x-3 space-y-3 inline-block md:inline-flex">
-              <button className="btn btn-secondary btn-wide">Hire Me</button>
-              <button className="btn btn-secondary btn-wide">My Resume</button>
+              <Link 
+              to="contact" 
+              spy={true} 
+              smooth={true} 
+              offset={-70} 
+              duration={500}
+              className='btn btn-secondary btn-wide' 
+              >
+                <a className='' role='button'>Hire Me</a>
+              </Link>
+
+              <Link 
+              to="resume" 
+              spy={true} 
+              smooth={true} 
+              offset={-70} 
+              duration={500}
+              className='btn btn-secondary btn-wide' 
+              >
+                <a className='' role='button'>Resume</a>
+              </Link>
             </div>
           </div>
         </div>
