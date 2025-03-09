@@ -2,16 +2,15 @@ import React from 'react';
 import contact_data from "../../assets/contact/contact_data"
 import FormMessage from './FormMessage';
 
-const ContactSection = () => {
-  
+const ContactSection = () => {  
   return (
     <div id="contact" className='flex items-center justify-center'>
       <div className="p-10 max-w-7xl text-center mx-10 md:mx-25 space-y-3">
         <h1 className='text-5xl font-bold'>Contact <span className='font-light'>Me</span></h1>
-        <h2 className='text-2xl'>SubTitle About Section</h2>
+        <h2 className='text-2xl'>Let’s Connect and Collaborate</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur tempore cupiditate corrupti magnam qui, 
-          optio pariatur fugiat vel repellendus animi distinctio. Provident minus architecto eveniet, accusamus eos assumenda id?
+          Have a question, project idea, or just want to say hello? Feel free to reach out to me via email, WhatsApp, LinkedIn, or GitHub. <br /> 
+          I’m always open to new opportunities and collaborations!
         </p>
         <div className="container bg-black/50 w-full p-10 rounded-4xl mt-8">
           <div className="tabs tabs-lift">

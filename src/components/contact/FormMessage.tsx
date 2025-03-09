@@ -16,19 +16,35 @@ const FormMessage = () => {
     <>
       <div className="form-container">
         <button 
-          className={`btn ${isDisabled ? 'btn-disabled btn-wide z-1 absolute left-0 translate-x-60' : 'relative z-0 -translate-x-34 left-0'} w-3xl mb-6 shadow-2xl ease-in-out duration-1000`}
+          className={`btn ${isDisabled ? 'btn-disabled border border-error text-error z-1 relative right-0 w-10 overflow-hidden' : 'border border-error text-error w-200 relative z-0 left-0 overflow-hidden'} overflow-hidden mb-6 shadow-2xl ease-in-out duration-1000  transition-all`}
           disabled={isDisabled}
           onClick={handleToggle}
         >
-          Send message from {isEmail ? 'Email' : 'Email'} <SiGmail />
+          {!isEmail ? (
+            <span>
+              Send message from GMail? <SiGmail className='absolute left-0 top-0 m-3 overflow-hidden'/>
+            </span>
+          ) : (
+            <span>
+              <SiGmail className='absolute left-0 top-0 m-3 overflow-hidden'/>
+            </span>
+          )}
         </button>
 
         <button 
-          className={`btn ${!isDisabled ? 'btn-disabled btn-wide z-1 absolute right-0 -translate-x-60' : 'relative z-0 translate-x-34 right-0'} overflow-hidden w-3xl mb-6 shadow-2xl ease-in-out duration-1000`}
+          className={`btn ${!isDisabled ? 'btn-disabled border border-success text-success z-1 relative left-0 w-10 overflow-hidden' : 'border border-success text-success w-200 relative z-0 right-0 overflow-hidden'} overflow-hidden mb-6 shadow-2xl ease-in-out duration-1000 transition-all`}
           disabled={!isDisabled}
           onClick={handleToggle}
         >
-          Send message from {!isEmail ? 'WhatsApp' : 'WhatsApp'} <SiWhatsapp />
+          {!isEmail ? (
+            <span>
+              <SiWhatsapp className='absolute right-0 top-0 m-3 overflow-hidden' />
+            </span>
+          ) : (
+            <span>
+              Send message from WhatsApp? <SiWhatsapp className='absolute right-0 top-0 m-3 overflow-hidden'/>
+            </span>
+          )}
         </button>
 
         {isEmail ? (

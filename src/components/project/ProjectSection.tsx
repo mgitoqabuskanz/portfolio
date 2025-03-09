@@ -35,9 +35,10 @@ const ProjectSection = () => {
     <div id='project' className='flex items-center justify-center'>
       <div className="p-10 max-w-7xl text-center mx-10 md:mx-25 space-y-3">
         <h1 className='text-5xl font-bold w-full'><span className='font-light'>My</span> Project</h1>
-        <h2 className='text-2xl w-full'>SubTitle About Section</h2>
-        <p className="w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur tempore cupiditate corrupti magnam qui, 
-          optio pariatur fugiat vel repellendus animi distinctio. Provident minus architecto eveniet, accusamus eos assumenda id?
+        <h2 className='text-2xl w-full'>Showcasing My Expertise Through Real-World Solutions</h2>
+        <p className="w-full">
+          Here are some of the projects I have worked on, ranging from web applications to mobile solutions. Each project reflects my dedication to crafting innovative, 
+          user-friendly, and high-performance digital experiences using modern technologies.
         </p>
         <div className="flex justify-center mt-10">
           <div className="join">

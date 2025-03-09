@@ -4,8 +4,13 @@ const EducationExperience = () => {
   return (
     <>
       <h2 className='text-3xl font-bold'>Education <span className="font-light">Experience</span></h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur tempore cupiditate corrupti magnam qui, 
-        optio pariatur fugiat vel repellendus animi distinctio. Provident minus architecto eveniet, accusamus eos assumenda id?
+      <blockquote class="border-l-4 border-gray-500 italic my-8 pl-4 md:pl-8 py-4 mx-4 md:mx-10 max-w-md">
+        <p class="text-sm font-medium">"Building a Strong Technological Foundation Through Quality Education"</p>
+        <cite class="block text-right mt-4 text-gray-600">- Kanz Muhammad</cite>
+      </blockquote>
+      <p className="text-justify">
+        I pursued my education at Institut Teknologi Sepuluh Nopember (ITS) and earned a Bachelor’s Degree in Informatics. 
+        Throughout my studies, I specialized in programming, system development, and network security, which laid the foundation for my career in the IT industry.
       </p>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical text-start">
         <li>
