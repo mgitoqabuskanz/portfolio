@@ -1,7 +1,7 @@
 import { useState, JSX } from 'react'
 import '../../index.css'
 import project_data, {prj_categories} from '../../assets/project/project_data';
-import { SiFirebase, SiFramer, SiGraphql, SiJavascript, SiLaravel, SiMongodb, SiMysql, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import { SiFirebase, SiGraphql, SiJavascript, SiLaravel, SiMongodb, SiMysql, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
 
 const ProjectSection = () => {
