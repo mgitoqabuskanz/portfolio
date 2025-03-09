@@ -69,7 +69,7 @@ const NavbarSection = () => {
           </Link>
 
           <label className="swap swap-rotate">
-            <input type="checkbox" checked={theme === "dark"} onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
+            <input type="checkbox" checked={theme === "light"} onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
             <LuSun className="swap-off fill-current w-6 h-6" />
             <LuMoon className="swap-on fill-current w-6 h-6" />
           </label>

@@ -33,7 +33,7 @@ const HeroSection = () => {
               smooth={true} 
               offset={-70} 
               duration={500}
-              className='btn btn-accent hover:bg-transparent hover:text-accent btn-wide z-1 shadow' 
+              className='btn btn-accent hover:bg-transparent hover:text-accent btn-wide z-1 shadow transition-all duration-500' 
               >
                 <a role='button'>Hire Me</a>
               </Link>
@@ -44,7 +44,7 @@ const HeroSection = () => {
               smooth={true} 
               offset={-70} 
               duration={500}
-              className='btn btn-outline btn-accent btn-wide z-1' 
+              className='btn btn-outline btn-accent btn-wide z-1 transition-all duration-500' 
               >
                 <a role='button'>Resume</a>
               </Link>

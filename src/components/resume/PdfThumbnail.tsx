@@ -37,8 +37,8 @@ const PdfThumbnail: React.FC<PdfThumbnailProps> = ({ file }) => {
 
         {thumbnail && <img src={thumbnail} alt="PDF Thumbnail" className="transition-all duration-300" />}
 
-        <div className="absolute inset-0 bg-black/75 backdrop-blur-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-            <span className="text-white text-lg font-semibold">Click To Show Details</span>
+        <div className="absolute inset-0 bg-base-content/75 backdrop-blur-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <span className="text-gray-400 text-lg font-semibold">Click To Show Details</span>
         </div>
       </button>
     );

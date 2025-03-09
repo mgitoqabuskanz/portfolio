@@ -83,7 +83,7 @@ const FormSendWhatsapp = () => {
   }
   return (
     <>
-      <fieldset className="fieldset legend-none w-full bg-base-200 border border-base-300 p-4 rounded-box mx-auto">
+      <fieldset className="fieldset legend-none w-full bg-base-200 pt-0 p-4 rounded-box mx-auto">
         <legend className="fieldset-legend"></legend>
 
         <label className="fieldset-label">Name</label>
@@ -139,7 +139,7 @@ const FormSendWhatsapp = () => {
         <div className="fieldset-label">Please add a note before sending the message.</div>
         
         <button
-          className="btn btn-outline btn-accent hover:btn-accent mt-4"
+          className="btn btn-outline btn-success hover:btn-success mt-4 shadow"
           disabled={!isFormValid}
           onClick={handleSubmit}
         >

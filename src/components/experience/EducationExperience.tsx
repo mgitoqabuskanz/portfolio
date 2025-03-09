@@ -3,12 +3,10 @@ import { FaCircleCheck } from "react-icons/fa6"
 const EducationExperience = () => {
   return (
     <>
-      <h2 className='text-3xl font-bold'>Education <span className="font-light">Experience</span></h2>
-      <blockquote className="border-l-4 border-gray-500 italic my-8 pl-4 md:pl-8 py-4 mx-4 md:mx-10 max-w-md">
-        <p className="text-sm font-medium">"Building a Strong Technological Foundation Through Quality Education"</p>
-        <cite className="block text-right mt-4 text-gray-600">- Kanz Muhammad</cite>
-      </blockquote>
-      <p className="text-justify">
+      <h2 className='text-3xl font-bold text-accent'>Education <span className="font-light text-base-content">Experience</span></h2>
+      <h3 className="text-md font-black">"Building a Strong Technological Foundation Through Quality Education"</h3>
+      
+      <p className="text-justify text-base-content/75">
         I pursued my education at Institut Teknologi Sepuluh Nopember (ITS) and earned a Bachelor’s Degree in Informatics. 
         Throughout my studies, I specialized in programming, system development, and network security, which laid the foundation for my career in the IT industry.
       </p>
@@ -18,55 +16,55 @@ const EducationExperience = () => {
             <FaCircleCheck />
           </div>
           <div className="timeline-start mb-10 md:text-end">
-            <time className="font-mono italic">2015-2021</time>
-            <div className="text-lg font-black">Institut Teknologi Sepuluh Nopember (ITS)</div>
+            <time className="font-mono italic text-base-content/35">2015-2021</time>
+            <div className="text-lg font-black text-accent">Institut Teknologi Sepuluh Nopember (ITS)</div>
             <span className="font-bold">Bachelor's Degree in Informatics</span> - Faculty of Information and Communication Technology (FTIK)
           </div>
-          <hr />
+          <hr className="bg-base-content"/>
         </li>
         <li>
-          <hr />
+          <hr className="bg-base-content"/>
           <div className="timeline-middle">
             <FaCircleCheck />
           </div>
           <div className="timeline-end mb-10 md:text-start">
-            <time className="font-mono italic">2012-2015</time>
-            <div className="text-lg font-black">Senior High School of 15 Surabaya</div>
+            <time className="font-mono italic text-base-content/35">2012-2015</time>
+            <div className="text-lg font-black text-accent">Senior High School of 15 Surabaya</div>
             Science - SBI
           </div>
-          <hr />
+          <hr className="bg-base-content"/>
         </li>
         <li>
-          <hr />
+          <hr className="bg-base-content"/>
           <div className="timeline-middle">
             <FaCircleCheck />
           </div>
           <div className="timeline-start mb-10 md:text-end">
-            <time className="font-mono italic">2009-2012</time>
-            <div className="text-lg font-black">Junior High School of 6 Surabaya</div>
+            <time className="font-mono italic text-base-content/35">2009-2012</time>
+            <div className="text-lg font-black text-accent">Junior High School of 6 Surabaya</div>
             SBI
           </div>
-          <hr />
+          <hr className="bg-base-content"/>
         </li>
         <li>
-          <hr />
+          <hr className="bg-base-content"/>
           <div className="timeline-middle">
             <FaCircleCheck />
           </div>
           <div className="timeline-end md:mb-10 md:text-start">
-            <time className="font-mono italic">2003-2009</time>
-            <div className="text-lg font-black">Dr. Soetomo Elementary School V/327 Surabaya</div>
+            <time className="font-mono italic text-base-content/35">2003-2009</time>
+            <div className="text-lg font-black text-accent">Dr. Soetomo Elementary School V/327 Surabaya</div>
           </div>
-          <hr />
+          <hr className="bg-base-content"/>
         </li>
         <li>
-          <hr />
+          <hr className="bg-base-content"/>
           <div className="timeline-middle">
             <FaCircleCheck />
           </div>
           <div className="timeline-start md:text-end">
-            <time className="font-mono italic">2001-2003</time>
-            <div className="text-lg font-black">Islamic Centre Kindergarten School</div>
+            <time className="font-mono italic text-base-content/35">2001-2003</time>
+            <div className="text-lg font-black text-accent">Islamic Centre Kindergarten School</div>
           </div>
         </li>
       </ul>
