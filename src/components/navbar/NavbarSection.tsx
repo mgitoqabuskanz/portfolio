@@ -32,7 +32,7 @@ const NavbarSection = () => {
       <div className="navbar hidden lg:flex lg:fixed z-10 bg-black/50 backdrop-blur-md text-white shadow-sm items-center">
       
         <div className="navbar-start ml-5">
-          <a onClick={scrollToTop} className="btn-ghost text-xl cursor-pointer transition-all duration-500 hover:bg-white/30 rounded py-2 px-4 flex items-center gap-3"><img src={assets.logo} className='w-8' alt="logo" />KANZ</a>
+          <a onClick={scrollToTop} className="btn-ghost text-xl cursor-pointer transition-all duration-500 hover:bg-white/30 rounded py-2 px-4 flex items-center gap-3"><img src={assets.logo} className='w-8 btn-circle' alt="logo" />KANZ</a>
         </div>
 
         <div className="navbar-center">

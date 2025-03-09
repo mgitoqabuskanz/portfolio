@@ -84,8 +84,8 @@ const ProjectSection = () => {
         </div>
         <div className="grid grid-cols-3 gap-4">
           {filteredProjects.slice(0, showAll ? filteredProjects.length : 3).map((work, index) => (
-            <a href={work.w_link} className='block' key={index}>
-              <div className="card border-3 border-base-content/50 shadow-sm">
+            <a href={work.w_link} className='block hover:scale-125 transition-all duration-500 hover:z-1' key={index}>
+              <div className="card border-3 border-base-content/50 bg-base-content/50 backdrop-blur-xl shadow-sm">
                 <figure>
                   <img
                     src={work.w_img}
