@@ -53,9 +53,6 @@ const ProjectSection = () => {
               {prj_categories.map(category => (
                 <option key={category} value={category}>{category}</option>
               ))}
-              {/* {prj_categories.map((category, index) => (
-                <option key={index} value={category}>{category}</option>
-              ))} */}
             </select>
             <div className="indicator">
               <button className="btn join-item">Search</button>
@@ -83,25 +80,6 @@ const ProjectSection = () => {
               </div>
             </a>
           ))} 
-          {/* {project_data.slice(0,showAll ? project_data.length : 3).map((work, index) => (
-            <a href={work.w_link} className='block'>
-              <div key={index} className="card bg-base-100  shadow-sm">
-                <figure>
-                  <img
-                    src={work.w_img}
-                    alt={work.w_name} />
-                </figure>
-                <div className="card-body items-center">
-                  <h2 className="card-title">{work.w_name}</h2>
-                  <p>
-                    {work.w_desc.length > 100 ?
-                      `${work.w_desc.substring(0, 100)} (...)` : work.w_desc
-                    }
-                  </p>
-                </div>
-              </div>
-            </a>
-          ))}           */}
         </div>
         <a role="button" onClick={toggleshowAll} className="btn btn-wide btn-accent mt-10">{showAll ? 'Show Less' : 'Show All'}</a>
       </div>
