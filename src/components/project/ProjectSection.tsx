@@ -1,6 +1,8 @@
-import { useState } from 'react'
+import { useState, JSX } from 'react'
 import '../../index.css'
 import project_data, {prj_categories} from '../../assets/project/project_data';
+import { SiFirebase, SiFramer, SiGraphql, SiJavascript, SiLaravel, SiMongodb, SiMysql, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import { TbBrandFramerMotion } from 'react-icons/tb';
 
 const ProjectSection = () => {
   const [showAll, setshowAll] = useState(false);
@@ -27,9 +29,29 @@ const ProjectSection = () => {
     return matchesSearch && matchesFilter;
   });
 
-  function getSingleCategory(w_category: string[]): React.ReactNode {
-    return w_category.join(', ');
-  }
+  const categoryIcons: Record<string, JSX.Element> = {
+    React: <SiReact className="text-blue-500 text-3xl mt-3" />,
+    "Next.js": <SiNextdotjs className="text-black text-3xl mt-3" />,
+    Tailwind: <SiTailwindcss className="text-teal-500 text-3xl mt-3" />,
+    Laravel: <SiLaravel className="text-red-500 text-3xl mt-3" />,
+    JavaScript: <SiJavascript className="text-yellow-500 text-3xl mt-3" />,
+    TypeScript: <SiTypescript className="text-blue-500 text-3xl mt-3" />,
+    Firebase: <SiFirebase className="text-yellow-500 text-3xl mt-3" />,
+    "Framer Motion": <TbBrandFramerMotion className="text-fuchsia-500 text-3xl mt-3" />,
+    GraphQL: <SiGraphql className="text-fuchsia-500 text-3xl mt-3" />,
+    MongoDB: <SiMongodb className="text-green-600 text-3xl mt-3" />,
+    MySQL: <SiMysql className="text-blue-800 text-3xl mt-3" />,
+
+  };
+
+  const getCategoryIcons = (categories: string[]) => {
+    if (!categories || categories.length === 0) return null;
+    return categories.map((category, index) => (
+      <div key={index} className="flex items-center tooltip tooltip-bottom" data-tip={category}>
+        {categoryIcons[category] || <span>{category}</span>}
+      </div>
+    ));
+  };
 
   return (
     <div id='project' className='flex items-center justify-center'>
@@ -72,11 +94,11 @@ const ProjectSection = () => {
                 <div className="card-body items-center">
                   <h2 className="card-title">{work.w_name}</h2>
                   <p>
-                    {work.w_desc.length > 100 ?
-                      `${work.w_desc.substring(0, 100)} (...)` : work.w_desc
+                    {work.w_desc.length > 80 ?
+                      `${work.w_desc.substring(0, 80)} (...)` : work.w_desc
                     }
                   </p>
-                  <p className="text-gray-500">Category: {getSingleCategory(work.w_category)}</p>
+                  <p className="flex gap-2 items-center">{getCategoryIcons(work.w_category)}</p>
                 </div>
               </div>
             </a>
