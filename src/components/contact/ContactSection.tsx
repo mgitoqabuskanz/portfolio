@@ -1,17 +1,21 @@
 import React from 'react';
 import contact_data from "../../assets/contact/contact_data"
-import { BsDisplay } from 'react-icons/bs';
+// import FormSendEmail from './FormSendEmail';
+// import FormSendWhatsapp from './FormSendWhatsapp';
+import FormMessage from './FormMessage';
 
 const ContactSection = () => {
+  
   return (
     <div id="contact" className='flex items-center justify-center'>
       <div className="p-10 max-w-7xl text-center mx-10 md:mx-25 space-y-3">
         <h1 className='text-5xl font-bold'>Contact <span className='font-light'>Me</span></h1>
         <h2 className='text-2xl'>SubTitle About Section</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur tempore cupiditate corrupti magnam qui, 
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur tempore cupiditate corrupti magnam qui, 
           optio pariatur fugiat vel repellendus animi distinctio. Provident minus architecto eveniet, accusamus eos assumenda id?
         </p>
-        <div className="container bg-black/50 w-full p-10 rounded-4xl">
+        <div className="container bg-black/50 w-full p-10 rounded-4xl mt-8">
           <div className="tabs tabs-lift">
             <span className="tab"></span>
             {contact_data.map((contact, index) => (
@@ -43,28 +47,14 @@ const ContactSection = () => {
             ))}
             <span className="tab"></span>
           </div>
+
           <div className="flex w-full flex-col py-10 text-white">
             <div className="divider before:bg-white after:bg-white">OR</div>
           </div>
-          <h2>Send Me Direct Message</h2>
-          <fieldset className="fieldset legend-none w-full bg-base-200 border border-base-300 p-4 rounded-box mx-auto">
-            <legend className="fieldset-legend"></legend>
 
-            <label className="fieldset-label">Name</label>
-            <input type="email" className="input w-full" placeholder="Name" />
-            
-            <label className="fieldset-label">E-Mail</label>
-            <input type="password" className="input w-full" placeholder="E-Mail" />
-
-            <label className="fieldset-label">Phone Number</label>
-            <input type="password" className="input w-full" placeholder="Phone Number" />
-            
-            <legend className="fieldset-label">Message</legend>
-            <textarea className="textarea h-fit w-full" placeholder="Message"></textarea>
-            <div className="fieldset-label">Optional</div>
-            
-            <button className="btn btn-ghost border border-neutral hover:btn-neutral mt-4">Login</button>
-          </fieldset>
+          {/* <FormSendEmail />
+          <FormSendWhatsapp /> */}
+            <FormMessage />
         </div>
       </div>
     </div>

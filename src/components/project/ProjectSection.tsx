@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import '../index.css'
-import { mywork_data } from "../assets/assets";
+import '../../index.css'
+import project_data from '../../assets/project/project_data';
 
 const ProjectSection = () => {
   const [showAll, setshowAll] = useState(false);
@@ -32,7 +32,7 @@ const ProjectSection = () => {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-4">
-          {mywork_data.slice(0,showAll ? mywork_data.length : 3).map((work, index) => (
+          {project_data.slice(0,showAll ? project_data.length : 3).map((work, index) => (
             <a href={work.w_link} className='block'>
               <div key={index} className="card bg-base-100  shadow-sm">
                 <figure>

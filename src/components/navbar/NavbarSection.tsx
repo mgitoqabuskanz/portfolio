@@ -14,7 +14,7 @@ const NavbarSection = () => {
   };
   return (
     <>
-      <div className="navbar hidden lg:flex lg:fixed z-10 bg-black/50 text-white shadow-sm">
+      <div className="navbar hidden lg:flex lg:fixed z-10 bg-black/50 backdrop-blur-md text-white shadow-sm">
         <div className="navbar-start">
           <a onClick={scrollToTop} className="btn btn-ghost text-xl">Kanz</a>
         </div>
