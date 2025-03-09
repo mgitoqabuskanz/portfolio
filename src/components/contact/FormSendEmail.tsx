@@ -14,7 +14,6 @@ const FormSendEmail = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     if (name === 'phone') {
-      // Allow only digits (0-9)
       if (/^\+?\d*$/.test(value)) {
         setFormData({
           ...formData,

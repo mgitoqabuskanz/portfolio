@@ -16,27 +16,27 @@ const ContactSection = () => {
           <div className="tabs tabs-lift">
             <span className="tab"></span>
             {contact_data.map((contact, index) => (
-              <React.Fragment key={contact.contact_id}>
+              <React.Fragment key={contact.c_id}>
                 <label className="tab gap-1">
                   <input type="radio" name="my_tabs_4" defaultChecked={index === 0} />
-                  <contact.contact_icon />
-                  {contact.contact_id}
+                  <contact.c_icon />
+                  {contact.c_id}
                 </label>
                 <div className="tab-content bg-base-100 border-base-300 p-6 space-y-4">
                   <div className="avatar">
                     <div className="w-50 rounded-full">
-                      <img src={contact.contact_img} alt={contact.contact_name} />
+                      <img src={contact.c_img} alt={contact.c_name} />
                     </div>
                   </div>
                   <div className="flex w-full flex-col">
-                    <div className="divider divider-neutral text-3xl">{contact.contact_name}</div>
+                    <div className="divider divider-neutral text-3xl">{contact.c_name}</div>
                   </div>
                   <div className="join">
                     <span className="join-item px-3 bg-gray-200 flex items-center">
-                        <contact.contact_icon className="text-gray-500"  />
+                        <contact.c_icon className="text-gray-500"  />
                     </span>
-                    <a href={contact.contact_url} target="_blank" className="input input-bordered join-item w-60 cursor-pointer" rel="noopener noreferrer">
-                      {contact.contact_uname}
+                    <a href={contact.c_url} target="_blank" className="input input-bordered join-item w-60 cursor-pointer" rel="noopener noreferrer">
+                      {contact.c_uname}
                     </a>
                   </div>
                 </div>
