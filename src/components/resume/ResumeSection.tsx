@@ -4,9 +4,9 @@ import React from 'react'
 
 const ResumeSection: React.FC = () => {
   return (
-    <div id='resume' className='flex items-center justify-center'>
-      <div className="flex p-10 max-w-7xl text-center md:text-start mx-10 md:mx-25 space-y-3">
-        <div className="flex-col space-y-4 p-10">
+    <div id='resume' className='flex items-center justify-center max-w-screen m-0'>
+      <div className="md:flex flex-row p-10 max-w-7xl text-center md:text-start md:mx-25 space-y-3 w-full">
+        <div className="inline-block space-y-4 p-10">
           <h1 className='text-5xl font-bold text-accent'><span className='font-light text-base-content'>My</span> Resume</h1>
           <h2 className='text-xl font-black mt-5'>A Snapshot of My Skills, Experience, and Achievements</h2>
           <p className='mt-10 text-base-content/65'>

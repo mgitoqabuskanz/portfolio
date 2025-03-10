@@ -3,6 +3,7 @@ import '../../index.css'
 import project_data, {prj_categories} from '../../assets/project/project_data';
 import { SiFirebase, SiGraphql, SiJavascript, SiLaravel, SiMongodb, SiMysql, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
+import { LuSearch } from 'react-icons/lu';
 
 const ProjectSection = () => {
   const [showAll, setshowAll] = useState(false);
@@ -54,8 +55,8 @@ const ProjectSection = () => {
   };
 
   return (
-    <div id='project' className='flex items-center justify-center'>
-      <div className="p-10 max-w-7xl text-center mx-10 md:mx-25 space-y-3">
+    <div id='project' className='flex items-center justify-center w-full'>
+      <div className="p-10 md:w-7xl w-full text-center md:mx-25 space-y-3">
         <h1 className='text-5xl font-bold w-full text-accent'><span className='font-light text-base-content'>My</span> Project</h1>
         <h2 className='text-2xl w-full font-black'>Showcasing My Expertise Through Real-World Solutions</h2>
         <p className="w-full text-base-content/65">
@@ -66,23 +67,24 @@ const ProjectSection = () => {
           <div className="join">
             <div>
               <input 
-              className="input join-item w-100 border-base-content" 
+              className="input join-item md:w-100 border-base-content" 
               placeholder="Search" 
               value={searchQuery}
               onChange={handleSearchChange}/>
             </div>
-            <select className="select join-item border-base-content" onChange={handleFilterChange} value={selectedFilter}>
-              <option value="">Filter</option>
+            <select className="select join-item border-base-content w-5 px-5 md:w-full" onChange={handleFilterChange} value={selectedFilter}>
+              <option value="" className='block sm:hidden'>Filter</option>
               {prj_categories.map(category => (
                 <option key={category} value={category}>{category}</option>
               ))}
             </select>
             <div className="indicator">
-              <button className="btn join-item border-base-content">Search</button>
+              <button className="btn join-item border-base-content hidden md:block">Search</button>
+              <button className="btn join-item border-base-content block md:hidden"><LuSearch /></button>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="inline-block w-full md:grid md:grid-cols-3 gap-4 space-y-4 md:space-y-0">
           {filteredProjects.slice(0, showAll ? filteredProjects.length : 3).map((work, index) => (
             <a href={work.w_link} className='block hover:scale-125 transition-all duration-500 hover:z-1' key={index}>
               <div className="card border-3 border-base-content/50 bg-base-content/50 backdrop-blur-xl shadow-sm">

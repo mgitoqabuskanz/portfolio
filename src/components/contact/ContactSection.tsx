@@ -4,8 +4,8 @@ import FormMessage from './FormMessage';
 
 const ContactSection = () => {  
   return (
-    <div id="contact" className='flex items-center justify-center'>
-      <div className="p-10 max-w-7xl text-center mx-10 md:mx-25 space-y-3">
+    <div id="contact" className='flex items-center justify-center w-full'>
+      <div className="md:p-10 max-w-7xl text-center md:mx-25 space-y-3 w-full">
         <h1 className='text-5xl font-bold text-accent'>Contact <span className='font-light text-base-content'>Me</span></h1>
         <h2 className='text-2xl font-black'>Let’s Connect and Collaborate</h2>
         <p className='text-base-content/65'>
@@ -18,24 +18,24 @@ const ContactSection = () => {
             {contact_data.map((contact, index) => (
               <React.Fragment key={contact.c_id}>
                 <label className="tab gap-3">
-                  <input type="radio" name="my_tabs_4" defaultChecked={index === 0} />
                   <contact.c_icon />
-                  {contact.c_id}
+                  <input type="radio" name="my_tabs_4" defaultChecked={index === 0} />
+                  <span className='hidden md:block'>{contact.c_id}</span>
                 </label>
                 <div className="tab-content bg-base-100 border-base-300 p-6 space-y-4">
                   <div className="avatar">
-                    <div className="w-50 rounded-full">
+                    <div className="max-w-50 rounded-full">
                       <img src={contact.c_img} alt={contact.c_name} />
                     </div>
                   </div>
                   <div className="flex w-full flex-col">
-                    <div className="divider divider-base-content text-3xl">{contact.c_name}</div>
+                    <div className="divider divider-base-content md:text-3xl">{contact.c_name}</div>
                   </div>
                   <div className="join">
-                    <span className="join-item px-3 bg-gray-200 flex items-center border border-base-content">
+                    <span className="join-item px-2 md:px-3 w-fit bg-gray-200 flex items-center border border-base-content">
                         <contact.c_icon className="text-gray-500"  />
                     </span>
-                    <a href={contact.c_url} target="_blank" className="input input-bordered join-item w-60 cursor-pointer border border-base-content justify-center" rel="noopener noreferrer">
+                    <a href={contact.c_url} target="_blank" className="input input-bordered join-item w-55 md:w-60 cursor-pointer border border-base-content justify-center" rel="noopener noreferrer">
                       {contact.c_uname}
                     </a>
                   </div>

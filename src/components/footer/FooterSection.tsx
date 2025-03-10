@@ -3,7 +3,7 @@ import footer_data from "../../assets/footer/footer_data"
 
 const FooterSection = () => {
   return (
-    <footer className="bg-neutral/50 py-6 px-4 mt-10">
+    <footer className="bg-neutral/50 md:py-6 md:px-4 pt-10 pb-20 mt-10">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left">
         
         <div>

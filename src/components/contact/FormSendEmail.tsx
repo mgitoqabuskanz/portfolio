@@ -53,8 +53,16 @@ const FormSendEmail = () => {
     });
   };
 
+  const [isLoading, setIsLoading] = useState(false);
+
+
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
+
+    setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
 
     if (!isFormValid) {
       alert('Please fill in all fields correctly.');
@@ -83,6 +91,19 @@ const FormSendEmail = () => {
         alert(`Error Sending Message: ${error}`);
     });
   }
+  
+  const buttonTextSm = isLoading
+    ? "Sending..."
+    : isFormValid
+    ? "Send Message"
+    : "Fill Form First";
+
+  const buttonText = isLoading
+    ? "Sending..."
+    : isFormValid
+    ? "Send Message"
+    : "Please fill the form above to send WhatsApp";
+
   return (
     <>
       <fieldset className="fieldset legend-none w-full bg-base-200 pt-0 p-4 rounded-box mx-auto">
@@ -138,14 +159,19 @@ const FormSendEmail = () => {
           value={formData.message}
           onChange={handleChange}
         ></textarea>
-        <div className="fieldset-label">Please add a note before sending the message.</div>
+        <div className="fieldset-label text-start mb-5">Please add a note before sending the message.</div>
         
         <button
           className="btn btn-outline btn-success hover:btn-success mt-4 shadow"
-          disabled={!isFormValid}
+          disabled={!isFormValid || isLoading}
           onClick={handleSubmit}
         >
-          {isFormValid ? "Send Message" : "Please fill form above to send Email"}
+          <span className="block md:hidden">
+            {buttonTextSm}
+          </span>
+          <span className="hidden md:block">
+            {buttonText}
+          </span>
         </button>
       </fieldset>
     </>
