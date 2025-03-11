@@ -1,5 +1,5 @@
 import { Link, animateScroll as scroll } from 'react-scroll';
-import { assets } from '../../assets/assets';
+import { FILE_PATHS } from '../../assets/constants';
 import { LuMoon, LuSun } from 'react-icons/lu';
 import { useEffect, useState } from 'react';
 
@@ -32,7 +32,7 @@ const NavbarSection = () => {
       <div className="navbar hidden lg:flex lg:fixed z-10 bg-black/50 backdrop-blur-md text-white shadow-sm items-center">
       
         <div className="navbar-start ml-5">
-          <a onClick={scrollToTop} className="btn-ghost text-xl cursor-pointer transition-all duration-500 hover:bg-white/30 rounded py-2 px-4 flex items-center gap-3"><img src={assets.logo} className='w-8 btn-circle' alt="logo" />KANZ</a>
+          <a onClick={scrollToTop} className="btn-ghost text-xl cursor-pointer transition-all duration-500 hover:bg-white/30 rounded py-2 px-4 flex items-center gap-3"><img src={FILE_PATHS.LOGO} className='w-8 btn-circle' alt="logo" />KANZ</a>
         </div>
 
         <div className="navbar-center">
@@ -69,7 +69,7 @@ const NavbarSection = () => {
           </Link>
 
           <label className="swap swap-rotate">
-            <input type="checkbox" checked={theme === "light"} onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
+            <input type="checkbox" checked={theme === "dark"} onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
             <LuSun className="swap-off fill-current w-6 h-6" />
             <LuMoon className="swap-on fill-current w-6 h-6" />
           </label>

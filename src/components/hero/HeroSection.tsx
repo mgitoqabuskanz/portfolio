@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll'
-import { assets } from '../../assets/assets'
+import { FILE_PATHS } from '../../assets/constants'
 import { SiGithub, SiGmail, SiLinkedin, SiWhatsapp } from 'react-icons/si'
 
 const HeroSection = () => {
@@ -9,7 +9,7 @@ const HeroSection = () => {
       id='home'
       className="hero min-h-screen w-full"
       style={{
-        backgroundImage: `url(${assets.header_img})`,
+        backgroundImage: `url(${FILE_PATHS.HERO_IMG})`,
       }}
       >
         <div className="hero-overlay"></div>
@@ -25,7 +25,7 @@ const HeroSection = () => {
           >
             <a role='button'>
               <img
-              src={assets.profile_img}
+              src={FILE_PATHS.PROFILE_IMG}
               className="max-w-xs shadow-3xl flex rounded-4xl hover:scale-110 transition-all duration-500 z-10" 
               alt="profile_img" 
               />
@@ -47,7 +47,7 @@ const HeroSection = () => {
             >
               <a>
                 <img
-                src={assets.profile_img}
+                src={FILE_PATHS.PROFILE_IMG}
                 className="w-75 h-75 object-cover mx-auto my-5 flex md:hidden mask mask-squircle transition-all duration-500" 
                 alt="profile_img" 
                 />
@@ -58,6 +58,7 @@ const HeroSection = () => {
               I am an IT professional with expertise in web and mobile development, IT support, and network operations. 
               Passionate about creating seamless digital solutions, I specialize in full-stack development, system optimization, and IT infrastructure management.
             </p>
+            
             <div className="flex justify-center md:justify-start my-5 gap-3">
               <Link 
               to="contact" 

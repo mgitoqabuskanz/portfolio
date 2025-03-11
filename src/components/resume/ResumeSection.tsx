@@ -1,22 +1,39 @@
-import { assets } from '../../assets/assets'
-import PdfThumbnail from './PdfThumbnail'
 import React from 'react'
+import { RESUME_CONTENT, FILE_PATHS } from '../../assets/constants';
+import { ResumeConverter } from './ResumeConverter'
+import { handleDownload } from '../../assets/module/handleDownload';
+import styles from "../../assets/style/resume.module.css";
 
 const ResumeSection: React.FC = () => {
   return (
-    <div id='resume' className='flex items-center justify-center max-w-screen m-0'>
-      <div className="md:flex flex-row p-10 max-w-7xl text-center md:text-start md:mx-25 space-y-3 w-full">
-        <div className="inline-block space-y-4 p-10">
-          <h1 className='text-5xl font-bold text-accent'><span className='font-light text-base-content'>My</span> Resume</h1>
-          <h2 className='text-xl font-black mt-5'>A Snapshot of My Skills, Experience, and Achievements</h2>
-          <p className='mt-10 text-base-content/65'>
-            Explore my professional journey, including my education, work experience, and technical expertise. 
-            Download my resume to learn more about how my skills and experience align with your needs.
+    <div id="resume" className={styles["resume-container"]}>
+      <div className={styles["resume-wrapper"]}>
+        
+        {/* Left-Section */}
+        <div className={styles["resume-content-left"]}>
+          <h1 className={styles["resume-title"]}>
+            <span className={styles["resume-span"]}>
+              {RESUME_CONTENT.h1}
+            </span>
+            &nbsp;{RESUME_CONTENT.h1_span}
+          </h1>
+          <h2 className={styles["resume-subtitle"]}>
+            {RESUME_CONTENT.h2}
+          </h2>
+          <p className={styles["resume-text"]}>
+            {RESUME_CONTENT.p}
           </p>
-          <a role='button'href={assets.resume} download className="btn btn-accent btn-wide mt-10">Download Resume</a>
+          <button 
+          onClick={handleDownload}
+          className={styles["resume-button"]}
+          >
+            {RESUME_CONTENT.btn_DownResume}
+          </button>
         </div>
-        <div className="flex-col p-10 bg-success-content rounded-4xl">
-          <PdfThumbnail file={assets.resume} />
+        
+        {/* Right-Section */}
+        <div className={styles["resume-preview"]} role="img" aria-label="Resume Preview">
+          <ResumeConverter file={FILE_PATHS.RESUME_PDF} />
         </div>
 
       </div>

@@ -1,5 +1,5 @@
 import services_data from "../../assets/about/services_data"
-import { assets } from "../../assets/assets"
+import { FILE_PATHS } from "../../assets/constants"
 import './style.css'
 
 const AboutSection = () => {
@@ -7,7 +7,7 @@ const AboutSection = () => {
     <div id="about" className='flex items-center justify-center'>
       <div className="p-10 max-w-7xl text-center md:mx-25 space-y-3">
         <h1 className='text-5xl font-bold text-accent'>About <span className='font-light text-base-content'>Me</span></h1>
-        <img src={assets.profile_img} className="max-h-103 block md:hidden" alt="Profile_Image" />
+        <img src={FILE_PATHS.PROFILE_IMG} className="max-h-103 block md:hidden" alt="Profile_Image" />
         <h2 className='text-2xl font-black mt-5'>Full-Stack Developer | Network Operations Center (NOC) Engineer | Cybersecurity Specialist</h2>
         <p className="text-justify text-indent mt-10 text-base-content/65">
           I am a dedicated IT professional with a Bachelor's degree in Informatics from Institut Teknologi Sepuluh Nopember (ITS), bringing extensive experience in IT support, network operations, and full-stack development for both mobile and web applications. 
@@ -28,7 +28,7 @@ const AboutSection = () => {
           </div>
 
           <div className="flex-col">
-            <img src={assets.profile_img} className="max-h-103" alt="Profile_Image" />
+            <img src={FILE_PATHS.PROFILE_IMG} className="max-h-103" alt="Profile_Image" />
           </div>
 
           <div className="flex-1 flex flex-col space-y-3 pl-4 text-start">
