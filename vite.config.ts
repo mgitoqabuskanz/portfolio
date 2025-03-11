@@ -7,6 +7,7 @@ export default defineConfig({
   base: '/portfolio',
   plugins: [react(), tailwindcss()],
   build: {
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         intro: 'window.eval = function() {};',
