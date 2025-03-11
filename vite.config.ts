@@ -9,7 +9,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        intro: 'window.eval = function() {};'
+        intro: 'window.eval = function() {};',
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          pdfjs: ['pdfjs-dist'],
+        }
       }
     }
   },
