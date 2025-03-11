@@ -1,8 +1,20 @@
 import { Link } from 'react-scroll'
 import { FILE_PATHS } from '../../assets/constants'
 import { SiGithub, SiGmail, SiLinkedin, SiWhatsapp } from 'react-icons/si'
+import { LuMoon, LuSun } from 'react-icons/lu'
+import { useEffect, useState } from 'react'
 
 const HeroSection = () => {
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+  
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
   return (
     <>
       <div
@@ -32,7 +44,7 @@ const HeroSection = () => {
             </a>
           </Link>
 
-          <div>
+          <div className='my-8'>
             <h1 className="md:text-3xl text-2xl font-light text-neutral-content/95">Hi, i'm</h1>
             <h1 className="md:text-5xl text-4xl font-black text-accent hover:text-neutral-content transition-all duration-500">Kanz <span className="font-light text-neutral-content">Muhammad</span></h1> 
             <h3 className='text-sm font-extralight text-neutral-content/50'>(He/Him)</h3>
@@ -59,7 +71,7 @@ const HeroSection = () => {
               Passionate about creating seamless digital solutions, I specialize in full-stack development, system optimization, and IT infrastructure management.
             </p>
             
-            <div className="flex justify-center md:justify-start my-5 gap-3">
+            <div className="flex justify-center md:justify-start gap-3 my-4">
               <Link 
               to="contact" 
               spy={true} 
@@ -82,11 +94,23 @@ const HeroSection = () => {
                 <a role='button'>Resume</a>
               </Link>
             </div>
-            <div className="flex justify-center md:justify-start gap-3 mb-5">
+            <div className="flex justify-center md:justify-start gap-3 my-8">
               <button className="btn btn-outline hover:btn-accent btn-circle text-3xl p-2 tooltip tooltip-bottom tooltip-accent hover:scale-110 transition-all duration-500" data-tip="GMail"><SiGmail /></button>
               <button className="btn btn-outline hover:btn-accent btn-circle text-3xl p-2 tooltip tooltip-bottom tooltip-accent hover:scale-110 transition-all duration-500" data-tip="WhatsApp"><SiWhatsapp /></button>
               <button className="btn btn-outline hover:btn-accent btn-circle text-3xl p-2 tooltip tooltip-bottom tooltip-accent hover:scale-110 transition-all duration-500" data-tip="LinkedIn"><SiLinkedin /></button>
               <button className="btn btn-outline hover:btn-accent btn-circle text-3xl p-2 tooltip tooltip-bottom tooltip-accent hover:scale-110 transition-all duration-500" data-tip="GitHub"><SiGithub /></button>
+            </div>
+            <div className="flex md:hidden justify-center">
+              <label className="flex cursor-pointer gap-4 items-center text-neutral-content opacity-50">
+                <LuSun className="swap-off fill-current w-6 h-6" />
+                <input 
+                  type="checkbox" 
+                  checked={theme === "dark"} 
+                  onChange={toggleTheme} 
+                  className="toggle theme-controller w-12 h-6 text-neutral-content border-2 border-neutral-content transition-all duration-500 ease-in-out"
+                />
+                <LuMoon className="swap-on fill-current w-6 h-6" />
+              </label>
             </div>
           </div>
         </div>

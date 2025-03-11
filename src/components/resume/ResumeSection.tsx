@@ -1,7 +1,7 @@
 import React from 'react'
 import { RESUME_CONTENT, FILE_PATHS } from '../../assets/constants';
 import { ResumeConverter } from './ResumeConverter'
-import { handleDownload } from '../../assets/module/handleDownload';
+import { handleDownload } from '../../assets/module/ResumeDownload';
 import styles from "../../assets/style/resume.module.css";
 
 const ResumeSection: React.FC = () => {

@@ -27,7 +27,7 @@ const WorkExperience = () => {
           <div className="timeline-middle">
             <FaCircleCheck />
           </div>
-          <div className="timeline-start md:mb-10 md:text-end">
+          <div className="timeline-start mb-10 md:text-end">
             <time className="font-mono italic text-base-content/35">2020-2021</time>
             <div className="text-lg font-black text-accent">PT Artha Graha Samudera</div>
             IT Programmer

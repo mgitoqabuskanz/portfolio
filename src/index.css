@@ -11,4 +11,7 @@
   /* .className {
     xxx: xxxx;
   } */
+     .dock-active {
+       @apply shadow-2xl scale-110 transition-all duration-300;
+     }
 }
