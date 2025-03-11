@@ -51,7 +51,7 @@ const EducationExperience = () => {
           <div className="timeline-middle">
             <FaCircleCheck />
           </div>
-          <div className="timeline-end md:mb-10 md:text-start">
+          <div className="timeline-end mb-10 md:text-start">
             <time className="font-mono italic text-base-content/35">2003-2009</time>
             <div className="text-lg font-black text-accent">Dr. Soetomo Elementary School V/327 Surabaya</div>
           </div>

@@ -4,15 +4,17 @@ import FormMessage from './FormMessage';
 
 const ContactSection = () => {  
   return (
-    <div id="contact" className='flex items-center justify-center w-full'>
+    <div id="contact" className='flex items-center justify-center w-full bg-accent-content/50 md:bg-transparent py-12'>
       <div className="md:p-10 max-w-7xl text-center md:mx-25 space-y-3 w-full">
-        <h1 className='text-5xl font-bold text-accent'>Contact <span className='font-light text-base-content'>Me</span></h1>
-        <h2 className='text-2xl font-black'>Let’s Connect and Collaborate</h2>
-        <p className='text-base-content/65'>
-          Have a question, project idea, or just want to say hello? Feel free to reach out to me via email, WhatsApp, LinkedIn, or GitHub. <br /> 
-          I’m always open to new opportunities and collaborations!
-        </p>
-        <div className="container bg-black/50 w-full p-10 rounded-4xl mt-8">
+        <div className="px-10 m-0">
+          <h1 className='text-5xl font-bold text-accent'>Contact <span className='font-light text-base-content'>Me</span></h1>
+          <h2 className='text-2xl font-black'>Let’s Connect and Collaborate</h2>
+          <p className='text-base-content/65'>
+            Have a question, project idea, or just want to say hello? Feel free to reach out to me via email, WhatsApp, LinkedIn, or GitHub. <br /> 
+            I’m always open to new opportunities and collaborations!
+          </p>
+        </div>
+        <div className="container md:bg-accent-content/50 w-full p-10 md:rounded-4xl md:mt-8">
           <div className="tabs tabs-lift">
             <span className="tab"></span>
             {contact_data.map((contact, index) => (
